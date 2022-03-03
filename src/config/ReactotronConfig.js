@@ -3,7 +3,7 @@ import sagaPlugin from 'reactotron-redux-saga';
 import { reactotronRedux } from 'reactotron-redux'
 
 Reactotron.configure({
-    name: 'App',
+    name: 'iot4net',
     //host: "192.168.1.7"
 })
     .useReactNative()
