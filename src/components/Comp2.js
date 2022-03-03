@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { hpx, nf, wpx } from '../constants/constants'
+import { getFontSize } from '../constants/constants'
 
 const Comp2 = () => {
     const navigation = useNavigation()
@@ -13,7 +13,7 @@ const Comp2 = () => {
                     navigation.goBack()
                 }}
             >
-                <Text style={{ fontWeight: 'bold', fontSize: nf(18) }}>Move to Previous Page</Text>
+                <Text style={{ fontWeight: 'bold', fontSize: getFontSize(18) }}>Move to Previous Page</Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
