@@ -3,7 +3,7 @@ import { SafeAreaView, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
 import { types } from "../store/ActionTypes";
-import { hpx, nf, wpx } from '../constants/constants'
+import { getFontSize } from '../constants/constants'
 
 const Comp1 = () => {
 
@@ -12,7 +12,7 @@ const Comp1 = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={{ fontWeight: 'bold', fontSize: nf(18) }}> Welcome To React Native</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: getFontSize(18) }}> Welcome To React Native</Text>
             <TouchableOpacity
                 onPress={() => {
                     dispatch({
