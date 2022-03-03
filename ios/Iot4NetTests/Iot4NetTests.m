@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface iot4netTests : XCTestCase
+@interface Iot4NetTests : XCTestCase
 
 @end
 
-@implementation iot4netTests
+@implementation Iot4NetTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

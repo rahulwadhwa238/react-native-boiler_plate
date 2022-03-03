@@ -1,4 +1,4 @@
-package com.iot4net;
+package com.Iot4Net;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "iot4net";
+    return "Iot4Net";
   }
 }
