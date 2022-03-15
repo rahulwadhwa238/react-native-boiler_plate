@@ -1,12 +1,17 @@
 import EncryptedStorage from 'react-native-encrypted-storage';
 
-export const apiCall = async (url, body, method) => {
-    const token = await EncryptedStorage.getItem('accessToken')
-    const refreshToken = await EncryptedStorage.getItem('refreshToken')
+export const apiCall = (url, body, method) => {
+    var token
+    var refreshToken
+    EncryptedStorage.getItem('accessToken').then((value) => {
+        token = value
+    })
+    EncryptedStorage.getItem('refreshToken').then((value) => {
+        refreshToken = value
+    })
 
     console.log("Token------->", token)
 
-    console.log('Token', token)
     const timezoneOffset = new Date().getTimezoneOffset()
     const headers = {
         // Accept: 'application/json',
@@ -20,7 +25,7 @@ export const apiCall = async (url, body, method) => {
         headers,
         body: body ? JSON.stringify(body) : null,
     })
-        .then(async response => {
+        .then(response => {
             return new Promise(function (resolve, reject) {
                 response.json().then(responseParsed => {
                     if (response?.status == 402) {
