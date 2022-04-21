@@ -1,8 +1,6 @@
 import EncryptedStorage from 'react-native-encrypted-storage';
 
 export const apiCall = (url, body, method) => {
-    var token
-    var refreshToken
     EncryptedStorage.getItem('accessToken').then((value) => {
         token = value
     })
